@@ -1,6 +1,4 @@
-/*
-Joohan Kim
-Create file with 20 lines and 20 words in each line (wordGame.txt) (food, integers, doubles)
+/* Create file with 20 lines and 20 words in each line (wordGame.txt) (food, integers, doubles)
 Import java.io.* and java.util.* (file processors and scanner)
 Make welcome picture (variation of Challengeonerocket.java program; first program)
 Create the main and throws FileNotFoundException
@@ -57,13 +55,14 @@ public class finalproject {
         Challengeonerocket.Boxtwo();
         Challengeonerocket.Top();
         System.out.println(" ");
+        System.out.println("☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆");
 
         int points = 0; //sets point value to 0
         int rounds = 1; //number of rounds
         boolean playAgain = true;
 
         do {
-            File file = new File("/Users/joohan427/IdeaProjects/finalprojectword/src/foods.txt"); //creates file
+            File file = new File("/Users/joohan427/IdeaProjects/finalprojectword/src/words.txt"); //creates file
             Scanner scan = new Scanner(file);
             boolean guessInFile = false;
             System.out.print("Do you want to guess a whole number, food, or decimal? ");
@@ -82,7 +81,7 @@ public class finalproject {
 
             if (guessInFile) {
                 points++;
-                System.out.println("correct!");
+                System.out.println("   correct!");
                 System.out.println("☆ +1 point ☆");
             } else {
                 System.out.println("incorrect");
@@ -92,6 +91,7 @@ public class finalproject {
             System.out.println("Would you like to try again? ");
             String tryAgain = keyboard.next();
             tryAgain = tryAgain.toLowerCase(); //makes answer lowercase
+            System.out.println("☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆");
 
             if (tryAgain.contains("y")) { //the user wants to try again
                 rounds++;
@@ -104,9 +104,9 @@ public class finalproject {
         } while (playAgain);
 
         //print results and end game
-        System.out.println("Rounds:" + rounds);
-        System.out.println("Points:" + points);
-        System.out.println("game over");
+        System.out.println("☆ game over ☆");
+        System.out.println("   Rounds:" + rounds);
+        System.out.println("   Points:" + points);
         System.out.println("Thanks for playing!");
 
     }
